@@ -1,0 +1,88 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #252525;
+}
+
+
+.top-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background-color: #f8f8f8;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 2px 0;
+    z-index: 1000;
+}
+
+/* Nav Button */
+
+nav {
+    list-style: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(110, 67, 5);
+}
+
+
+/* Home and main content */
+
+
+#home {
+    padding: 120px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Changed from center to flex-start */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+#home h2 {
+    font-size: 1.5em;
+    text-align: left; /* Changed from center to left */
+    color: #252525;
+}
+
+
+/* Banner*/
+.banner {
+    width: 100%;
+    max-width: 1366px;
+    max-height: 578px;
+    margin: 0 auto; /* agar center */
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ini opsional, untuk potong gambar jika tinggi tetap ingin seragam */
+}

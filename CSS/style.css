@@ -3,6 +3,8 @@ html {
     padding: 0;
     font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 body {
@@ -16,13 +18,15 @@ body {
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    background-color: #f8f8f8;
+    background-color: #f8f8f8c7;
     top: 0%;
     left: 0%;
     width: 100%;
     padding: 2px 0;
     z-index: 1000;
-    border-bottom: 1px solid #929292;
+    border-bottom: 1px solid #929292; 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 /* Nav Button */
@@ -71,14 +75,25 @@ nav ul li a:hover {
  .main-content img {
     display: block;
     margin: 40px auto 0 auto;
-    width: 1366px;
+    width: 100%;
+    max-width: 1366px;
     height: 578px;
     object-fit: cover;
     border-radius: 10px;
     padding-bottom: 50px;
 }
 
-/* About section */
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-content img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px auto 0 auto;
+        padding-bottom: 30px;
+    }
+}
+
+/* About section (head quarters) */
 
 #about {
     padding: 20px;
@@ -86,15 +101,15 @@ nav ul li a:hover {
 
 .about-list {
     display: flex;
-    gap: 30px;
+    gap: 100px;
     justify-content: center;
     margin-top: 20px;
     flex-wrap: wrap;
 }
 
 .about-list img {
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 50%;
     display: block;
@@ -104,3 +119,25 @@ nav ul li a:hover {
     padding-bottom: 0;
 }
 
+.about-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: rgb(53, 53, 53);
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    margin-top: 10px;
+    align-self: center;
+    font-size: 1.15rem;
+    font-weight: bold;
+}

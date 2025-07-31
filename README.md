@@ -10,4 +10,11 @@
 - nav bar dan seisinya belom memiliki fungsi sebenarnya
 - perbaikan pada tombol section about-item, dibuat supaya terlihat lebih minimalis dan mudah untuk dibaca
 - css masih blom memiliki konsep tema
-- perbaikan pada dasar html supaya konten tidak terlalu lebar
+
+v0.2
+- pembuatan kolom form pada html
+- penambahan javascript pada kolom form
+- styling css pada kolom form
+- perubahan minor pada struktur
+
+- belum ada penambahan gambar

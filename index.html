@@ -6,15 +6,15 @@
     <title>My Website</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body>
+<body id="top">
     <header class="top-header">
         <h1>Pablo.co</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#top">Home</a></li>
                 <li><a href="#home">Our Profile</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="message.html">Message Us</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#message-us">Message Us</a></li>
             </ul>
         </nav>
 
@@ -24,8 +24,13 @@
     <main>
         <!-- Banner Section -->
         <div id="home">
-             <section class="main-content">
-                <h2>Hi [Your Name]! Welcome Back</h2>
+            <form id="nameForm">
+                <label for="inputName">Insert User Name:</label>
+                <input type="text" id="inputName" name="inputName" required>
+                <button type="submit" class="btn-form">Submit</button>
+            </form>
+            <section class="main-content">
+                <h2 id="welcomeText">Hi! Welcome</h2>
                 <p>This is the home page of my website.</p>
                 <div class="banner">
                     <img src="assets/images.png" alt="there should be an image here, but I don't have one">
@@ -40,27 +45,72 @@
             <h2>Our Headquarter</h2>
             <div class="about-list">
                 <div class="about-item">
-                    <a href="">
+                    <a href="" target="_blank">
                         <img src="assets/images.png" alt="Jakarta">
                     </a>
                     <button class="btn">Jakarta</button>
                 </div>
                 <div class="about-item">
-                    <a href="">
+                    <a href="" target="_blank">
                         <img src="assets/images.png" alt="Bandung">
                     </a>
                     <button class="btn">Bandung</button>
                 </div>
                 <div class="about-item">
-                    <a href="">
+                    <a href="" target="_blank">
                         <img src="assets/images.png" alt="Surabaya">
                     </a>
                     <button class="btn">Surabaya</button>
                 </div>
             </div>
         </section>
-
+       
         <hr>
+
+        <section id="message-us" class="form-section">
+            <h2>Message Us</h2>
+                <div class="form-container">
+                    <form id="customForm" action="message.html" method="get" style="flex: 1;">
+                        <div class="form-group">
+                            <label for="name">Nama:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Tanggal Lahir:</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Jenis Kelamin:</label>
+                            <div>
+                                <label>
+                                    <input type="radio" name="gender" value="Laki-laki" checked>
+                                    Laki-laki
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" value="Perempuan">
+                                    Perempuan
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-form">Kirim Pesan</button>
+                    </form>
+                    <div id="formResult">
+                        <!-- Hasil form akan tampil di sini -->
+                         
+                    </div>
+                </div>
+        </section>
+
     </main>
+    <footer>
+        <p>&copy; 2025 Pablo.co. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="JS/script.js"></script>
 </body>
 </html>

@@ -12,7 +12,33 @@ body {
     color: #252525;
 }
 
+/* name form */
+#nameForm {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#nameForm label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#nameForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 300px;
+}
+@media (max-width: 768px) {
+    #home {
+        width: 100%;
+        margin-top: 230px;
+    }
+    
+}
 
+/* Top Header */
 .top-header {
     display: flex;
     justify-content: space-around;
@@ -27,6 +53,16 @@ body {
     border-bottom: 1px solid #929292; 
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+}
+
+/* Responsive Top Header */
+@media (max-width: 768px) {
+    .top-header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 8px 10px;
+    }
 }
 
 /* Nav Button */
@@ -139,5 +175,54 @@ nav ul li a:hover {
     margin-top: 10px;
     align-self: center;
     font-size: 1.15rem;
+    font-weight: bold;
+}
+
+/* kolom form */
+.form-section {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.form-section h2 {
+    margin-top: 0;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.form-group input:focus,
+.form-group textarea:focus {    
+    border-color: #007bff;
+    outline: none;
+}
+
+.btn-form {
+    margin-top: 10px;
+    padding: 25px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
     font-weight: bold;
 }
